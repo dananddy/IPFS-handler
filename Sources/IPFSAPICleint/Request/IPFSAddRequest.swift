@@ -10,7 +10,7 @@ import Foundation
 open class IPFSAddRequest: IPFSRequest {
     public init(data: Data) {
         super.init(urlMethod: "/add",
-                   arguments: nil,
+                   arguments: URLArgument(name: "wrap-with-directory", value: "true"),
                    data: data)
     }
 }

@@ -8,10 +8,10 @@
 import Foundation
 import IPFSAPICleint
 
-class  IPFSSettings {
+public class  IPFSSettings {
     let apiSettings: APISettings
     
-    init(baseUrl: String) {
+    public init(baseUrl: String) {
         self.apiSettings = APISettings(baseURL: baseUrl)
     }
 }

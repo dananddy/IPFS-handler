@@ -9,7 +9,7 @@ import Foundation
 import IPFSAPICleint
 
 extension IPFSHandler {
-    func add(_ data: Data, complition: @escaping (IPFSAddResponse?, Error?) -> Void) throws {
+    public func add(_ data: Data, complition: @escaping (IPFSAddResponse?, Error?) -> Void) throws {
         let fileData = try encodeToFile(with: data)
         let request = IPFSAddRequest(data: fileData)
         apiCleint.sendRequest(request) { response, error in

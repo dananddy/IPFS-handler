@@ -11,7 +11,7 @@ final class IPFSHandlerTests: XCTestCase {
     func testAdd() async throws {
         let exp = expectation(description: "wait")
         let handler = IPFSHandler(settings: IPFSHandlerTests.getSettings())
-        try handler.add("Test".data(using: .utf8)!) { response, error in
+        try handler.add("Added repo".data(using: .utf8)!) { response, error in
             XCTAssertNotNil(response)
             exp.fulfill()
         }

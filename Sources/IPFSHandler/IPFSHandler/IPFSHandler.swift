@@ -7,11 +7,11 @@
 
 import IPFSAPICleint
 
-class IPFSHandler {
+public class IPFSHandler {
     let settings: IPFSSettings
     let apiCleint: IPFSAPIClient
     
-    init(settings: IPFSSettings) {
+    public init(settings: IPFSSettings) {
         self.settings = settings
         self.apiCleint = IPFSAPIClient(settings: settings.apiSettings)
     }
