@@ -62,8 +62,8 @@ open class IPFSAPIClient {
                 return
             }
             let response: T? = try? self.parseResponse(of: data)
+            print("Response: \n\(String(data: data, encoding: .utf8))")
             completion(response, nil)
-            
         }.resume()
     }
     
